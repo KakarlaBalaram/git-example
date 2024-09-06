@@ -2,9 +2,9 @@
 
 NUMBER=$1
 
-if [  $NUMBER -gt ] gt,   lt,  eq, -ne
+if [  $NUMBER -gt ] #gt,   lt,  eq, -ne
 then
   echo "Given number: $NUMBER is great than 20"
 else
-  echo "Given number: $NUMBER is lesss than 20"
+  echo "Given number: $NUMBER is less than 20"
   fi
