@@ -24,11 +24,11 @@ if [ $USERID -ne 0 ]
          fi
      else
        echo "Git is already installed, nothing to do.."
-       fi
+      fi
 
-       dnf list installed mysql
+    dnf list installed mysql
 
-       if [ $? -ne 0 ]
+      if [ $? -ne 0 ]
        then  
          echo "Myql is not installed ...going to install"
          dnf install mysql -y
@@ -41,5 +41,7 @@ if [ $USERID -ne 0 ]
          fi
        else
 
-       fi   
+      fi
+
+         
 
