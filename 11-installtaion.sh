@@ -7,7 +7,7 @@ if [ $USERID -ne 0 ]
  then
     echo "please run this script with root priveleges"
      exit 1
-    fi
+  fi
 
     dnf  list installed git 
 
@@ -24,24 +24,25 @@ if [ $USERID -ne 0 ]
          fi
      else
        echo "Git is already installed, nothing to do.."
-      fi
+ fi
 
     dnf list installed mysql
 
-      if [ $? -ne 0 ]
-       then  
-         echo "Myql is not installed ...going to install"
-         dnf install mysql -y
-         if [ $? -ne 0 ]
-         then
-           echo "my sql installation is falure"
-           exit1
-           else 
-             echo "my sql installation is sucess"
+    if [ $? -ne 0 ]
+    then 
+       echo "mysql is not installed ...going to install"
+       dnf install mysql -y
+       if [ $? -ne 0 ]
+       then   
+          echo "mysql installation is falure .. please check"
+         else
+           echo " mysql installation is sucess"
          fi
-       else
+      else
+        echo "mysql is already install"
 
       fi
 
+      
          
 
