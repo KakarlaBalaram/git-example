@@ -1,6 +1,14 @@
 #!/bin/bash
 
 USERID=$(id -u)
+
+CHECK_ROOT(){
+   if [ $USERID -ne 0 ]
+   then 
+     echo " please run this script with root privilage"
+     exit 1
+   fi
+}
 #echo "user ID is: $USERID"
 VALIDATE(){
     if [ $1 -ne 0 ]
@@ -11,6 +19,7 @@ VALIDATE(){
        echo "$2 is .. . SUCESS"
       fi
 }
+CHECK_ROOT
 
 if [ $USERID -ne 0 ]
  then
